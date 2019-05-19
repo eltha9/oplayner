@@ -15,7 +15,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
         </activity>
+        <activity android:name=".CreateParty"></activity>
+        <activity android:name=".JoinParty"></activity>
     </application>
 
 </manifest>

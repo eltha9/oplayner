@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">oplayner</string>
+    <string name="create_party">Créer ta soirée</string>
+    <string name="join_party">Rejoint une soirée</string>
+
+    <string name="welcome">Bienvenue</string>
+    <string name="welcome_text">Vous aussi vous avez connu les galères pour organiser une soirée ? Michel qui oublie les bières, Patrick qui rembourse jamais rien … Maintenant avec OPLAYNER tout le monde participe ! </string>
 </resources>
