@@ -17,6 +17,9 @@ class JoinParty : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.join_party)
     }
+    private lateinit var goParty:Button
+
+    //goParty.setOnClickListener // event on party
 
     //var tMgr = mAppContext.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
     //var mPhoneNumber = tMgr.line1Number
