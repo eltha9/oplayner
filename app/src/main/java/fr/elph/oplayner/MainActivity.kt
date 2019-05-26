@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         buttonJoin.setOnClickListener { view ->
 
             val intent = Intent(this, JoinParty::class.java)
+            intent.putExtra("plop ", "value")
             startActivity(intent)
         }
         buttonCreate.setOnClickListener { view ->
