@@ -21,6 +21,5 @@ class JoinParty : AppCompatActivity(){
 
     //goParty.setOnClickListener // event on party
 
-    //var tMgr = mAppContext.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
-    //var mPhoneNumber = tMgr.line1Number
+    
 }

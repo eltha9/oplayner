@@ -4,20 +4,15 @@
                                                    xmlns:tools="http://schemas.android.com/tools"
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent" android:id="@+id/linearLayout2">
-    <Button
-            android:text="@string/go_party"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/goParty" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
     <TextView
             android:text="@string/join_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/join_title" android:layout_marginTop="30dp"
             app:layout_constraintTop_toBottomOf="@+id/join_img" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="20dp" android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            android:layout_marginStart="20dp" android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:fontFamily="@font/source_sans_pro_extralight" android:textColor="@color/welcome"
+            android:textStyle="bold"/>
     <ImageView
             android:layout_width="372dp"
             android:layout_height="265dp" app:srcCompat="@drawable/ic_join_img"
@@ -25,33 +20,6 @@
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" android:layout_marginTop="30dp"
             app:layout_constraintTop_toBottomOf="@+id/logo"/>
-    <TextView
-            android:text="@string/avatar_choice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/psw_input" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
-    <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="id"
-            android:ems="10"
-            android:id="@+id/id_input" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/join_title" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent"/>
-    <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
-            android:id="@+id/psw_input"
-            android:text="Password" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/pseudo_input" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent"/>
     <ImageView
             android:layout_width="108dp"
             android:layout_height="34dp" app:srcCompat="@drawable/logo"
@@ -59,14 +27,68 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"/>
-    <EditText
+    <ScrollView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="pseudo"
-            android:ems="10"
-            android:id="@+id/pseudo_input" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/id_input"/>
+            android:layout_height="311dp"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                           android:layout_height="match_parent"
+                                                           android:id="@+id/linearLayout3">
+            <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="pseudo"
+                    android:ems="10"
+                    android:id="@+id/pseudo_input"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="194dp"
+                    android:layout_marginStart="16dp" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="id"
+                    android:ems="10"
+                    android:id="@+id/id_input"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/pseudo_input" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="16dp"/>
+            <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/psw_input"
+                    android:text="Password"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/id_input" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="16dp"/>
+            <TextView
+                    android:text="@string/avatar_choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/avatar_choice"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/psw_input"/>
+            <Button
+                    android:text="@string/go_party"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/goParty"
+                    android:background="@drawable/button"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/source_sans_pro_extralight"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.437" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/avatar_choice"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
