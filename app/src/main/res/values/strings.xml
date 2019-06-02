@@ -4,12 +4,18 @@
     <string name="join_party">Rejoint</string>
 
     <string name="welcome">Bienvenue</string>
-    <string name="welcome_text">Vous aussi vous avez connu les galères pour organiser une soirée ? Michel qui oublie les bières, Patrick qui rembourse jamais rien … Maintenant avec OPLAYNER tout le monde participe ! </string>
+    <string name="welcome_text">Vous aussi vous avez connu les galères pour organiser une soirée ? Michel qui oublie les
+        bières, Patrick qui rembourse jamais rien … Maintenant avec OPLAYNER tout le monde participe !
+    </string>
     <string name="join_title">Rejoins tes amis</string>
     <string name="avatar_choice">Choisis ton avatar</string>
     <string name="go_party">Rejoins la soirée</string>
 
     <string name="create_title">Information</string>
+
+    <string name="link_title">Bravo ta soirée vient d\'être créée</string>
+    <string name="link_continue">Poursuivre</string>
+    <string name="link_share">Partager</string>
 
 
 </resources>

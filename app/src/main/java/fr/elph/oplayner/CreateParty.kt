@@ -8,6 +8,7 @@ import android.widget.Toast
 import android.content.Intent
 
 //viewholder import
+/*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mikepenz.fastadapter.FastAdapter
@@ -16,6 +17,7 @@ import com.mikepenz.fastadapter.adapters.ItemAdapter
 import fr.elph.oplayner.viewholder.charcterItem
 import fr.elph.oplayner.viewholder.characterViewHolder
 import kotlinx.android.synthetic.main.activity_main.*
+*/
 
 class CreateParty : AppCompatActivity(){
 
@@ -28,8 +30,8 @@ class CreateParty : AppCompatActivity(){
         buttonCreate = findViewById(R.id.create_party)
 
         buttonCreate.setOnClickListener { view ->
-            val toast = Toast.makeText(applicationContext,"hello" , Toast.LENGTH_SHORT)
-            toast.show()
+            val intent = Intent(this, link::class.java)
+            startActivity(intent)
             /*
             val intent = Intent(this, JoinParty::class.java)
             intent.putExtra("plop ", "value")
@@ -39,7 +41,7 @@ class CreateParty : AppCompatActivity(){
 
 
         // viewholder part
-
+        /*
         private lateinit var recyclerView: FastAdapter<charcterItem>
 
         val layout = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
@@ -54,6 +56,7 @@ class CreateParty : AppCompatActivity(){
             Toast.makeText(this, "$position", Toast.LENGTH_SHORT).show()
             true
         }
+        */
     }
 
 

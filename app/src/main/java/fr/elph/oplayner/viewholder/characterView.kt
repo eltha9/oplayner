@@ -1,4 +1,5 @@
 package fr.elph.oplayner.viewholder
+/*
 
 import android.view.View
 import androidx.appcompat.view.menu.ActionMenuItemView
@@ -31,3 +32,5 @@ class charcterItem(val character) : AbstractItem<charcterItem, characterViewHold
 
     }
 }
+
+*/
