@@ -8,4 +8,8 @@
     <string name="join_title">Rejoins tes amis</string>
     <string name="avatar_choice">Choisis ton avatar</string>
     <string name="go_party">Rejoins la soirée</string>
+
+    <string name="create_title">Information</string>
+
+
 </resources>
