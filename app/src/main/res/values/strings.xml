@@ -9,7 +9,7 @@
     </string>
     <string name="join_title">Rejoins tes amis</string>
     <string name="avatar_choice">Choisis ton avatar</string>
-    <string name="go_party">Rejoins la soirée</string>
+    <string name="go_party">Rejoindre</string>
 
     <string name="create_title">Information</string>
 
@@ -20,9 +20,14 @@
 
     <!--placeholder -->
     <string name="create_holder_title">Nom de ta soirée</string>
-    <string name="create_holder_phone">n° de téléphone</string>
+    <string name="create_holder_phone">N° de téléphone</string>
     <string name="create_holder_date">Date</string>
     <string name="create_holder_adresse">Ton adresse</string>
     <string name="create_holder_message">Un petit message pour la team ;)</string>
+    <string name="create_holder_password">Mot de passe</string>
+
+    <string name="join_holder_title">Nom de la soirée</string>
+    <string name="join_holder_password">Mot de passe</string>
+    <string name="join_holder_pseudo">Ton pseudo</string>
 
 </resources>

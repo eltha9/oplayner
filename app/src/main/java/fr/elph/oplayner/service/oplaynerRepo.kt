@@ -3,10 +3,20 @@ package fr.elph.oplayner.service
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class oplaynerRepo : AppCompatActivity() {
+//retrofit import
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_oplayner_repo)
+class oplaynerRepo {
+    val api: oplaynerApi
+    //val url= "http://app.elph.fr"
+    val url ="http://192.168.1.128:8888/oplayner_back/"
+    init{
+        val retrofit = Retrofit.Builder()
+            .baseUrl(url)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        api = retrofit.create(oplaynerApi::class.java)
     }
 }

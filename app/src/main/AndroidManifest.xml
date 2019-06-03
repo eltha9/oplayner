@@ -3,6 +3,7 @@
           package="fr.elph.oplayner">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
             android:allowBackup="true"
@@ -11,6 +12,10 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".menu">
+        </activity>
+        <activity android:name=".service.oplaynerRepo">
+        </activity>
         <activity android:name=".link">
         </activity>
         <activity android:name=".MainActivity">
@@ -20,10 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".CreateParty"
-                  android:windowSoftInputMode="stateHidden|adjustPan"/>
-        <activity android:name=".JoinParty"
-                  android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+                android:name=".CreateParty"
+                android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity
+                android:name=".JoinParty"
+                android:windowSoftInputMode="stateHidden|adjustPan"/>
 
         <meta-data
                 android:name="preloaded_fonts"

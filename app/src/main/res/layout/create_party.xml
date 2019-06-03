@@ -44,6 +44,12 @@
             <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/create_password" android:hint="@string/create_holder_password"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:inputType="phone"
                     android:ems="10"
                     android:id="@+id/create_phone" tools:layout_conversion_absoluteHeight="45dp"

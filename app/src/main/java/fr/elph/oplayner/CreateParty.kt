@@ -6,7 +6,14 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import android.content.Intent
+import android.util.Log
+import fr.elph.oplayner.service.oplaynerRepo
+import fr.elph.oplayner.service.post
+import kotlinx.android.synthetic.main.create_party.*
+import retrofit2.Call
+import retrofit2.Response
 
+import retrofit2.Callback
 //viewholder import
 /*
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,7 +27,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 */
 
 class CreateParty : AppCompatActivity(){
-    
+
     private lateinit var buttonCreate:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,14 +37,64 @@ class CreateParty : AppCompatActivity(){
         buttonCreate = findViewById(R.id.create_party)
 
         buttonCreate.setOnClickListener { view ->
-            val intent = Intent(this, link::class.java)
-            startActivity(intent)
-            /*
-            val intent = Intent(this, JoinParty::class.java)
-            intent.putExtra("plop ", "value")
-            startActivity(intent)
-            */
+            // chope les varriable
+            val title = create_title.text.toString()
+            val phone = create_phone.text.toString()
+            val date = create_date.text.toString()
+            val adress = create_adress.text.toString()
+            val message = create_message.text.toString()
+            val password = create_password.text.toString()
+            // besoin d'une autre variable pour le choix de l'avatar
+
+            val isValid = title.isNotBlank() && phone.isNotBlank() && date.isNotBlank() && adress.isNotBlank() && message.isNotBlank() && password.isNotBlank()
+
+            if(isValid){
+                val intent = Intent(this, link::class.java)
+
+                val repo = oplaynerRepo()
+                    //mettre le lien
+                    repo.api.postData(
+                        "true",
+                        "$title",
+                        "$date",
+                        "party",
+                        "$password",
+                        "$message",
+                        "$adress",
+                        "$phone"
+                    )
+                        .enqueue(object : Callback<post> {
+                            override fun onFailure( call: Call<post>, t: Throwable){
+                                t.printStackTrace()
+                                Toast.makeText(this@CreateParty, "error", Toast.LENGTH_SHORT).show()
+                            }
+                            override fun onResponse(call: Call<post>, response: Response<post>){
+                                val res = response.body()
+                                Log.i("retofit ","response : $response")
+                                if(res != null){
+
+                                    if(response.code() == 200){
+                                        val linkValue = "oplayner.albandelachaume.fr/$title"
+                                        intent.putExtra("link", linkValue)
+                                        startActivity(intent)
+                                    }
+
+                                }
+                            }
+                        })
+
+
+
+            }else{
+                Toast.makeText(this, "Complete all the form !!", Toast.LENGTH_SHORT).show()
+            }
         }
+
+        val TAG = "createParty"
+        Log.i(TAG,"Entering CreateParty")
+
+
+
 
 
         // viewholder part
@@ -61,3 +118,4 @@ class CreateParty : AppCompatActivity(){
 
 
 }
+

@@ -25,16 +25,16 @@ class link : AppCompatActivity() {
         buttonShare = findViewById(R.id.share)
 
         buttonContinue.setOnClickListener{ view ->
-            /*
-            val intent = Intent()
+
+            val intent = Intent(this, menu::class.java)
             startActivity(intent)
-            */
-            Toast.makeText(this , "continue", Toast.LENGTH_SHORT).show()
         }
 
         buttonShare.setOnClickListener{view->
 
-            val textShare = "http://app.elph.fr/"
+
+            val textShare:String = intent.getStringExtra("link")
+
             ShareCompat.IntentBuilder.from(this)
                 .setType("text/plain")
                 .setChooserTitle("share url")
