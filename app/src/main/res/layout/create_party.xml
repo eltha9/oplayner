@@ -37,11 +37,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:text="Name"
                     android:ems="10"
                     android:id="@+id/create_title" tools:layout_conversion_absoluteHeight="45dp"
                     tools:layout_editor_absoluteY="403dp" tools:layout_editor_absoluteX="0dp"
-                    tools:layout_conversion_absoluteWidth="411dp"/>
+                    tools:layout_conversion_absoluteWidth="411dp" android:hint="@string/create_holder_title"/>
             <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -49,27 +48,26 @@
                     android:ems="10"
                     android:id="@+id/create_phone" tools:layout_conversion_absoluteHeight="45dp"
                     tools:layout_editor_absoluteY="448dp" tools:layout_editor_absoluteX="0dp"
-                    tools:layout_conversion_absoluteWidth="411dp"/>
+                    tools:layout_conversion_absoluteWidth="411dp" android:hint="@string/create_holder_phone"/>
             <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="date"
                     android:ems="10"
-                    android:id="@+id/create_date"/>
+                    android:id="@+id/create_date" android:hint="@string/create_holder_date"/>
             <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:text="Name"
                     android:ems="10"
-                    android:id="@+id/create_adress"/>
+                    android:id="@+id/create_adress" android:hint="@string/create_holder_adresse"/>
             <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textMultiLine"
                     android:gravity="start|top"
                     android:ems="10"
-                    android:id="@+id/create_message"/>
+                    android:id="@+id/create_message" android:hint="@string/create_holder_message"/>
             <TextView
                     android:text="@string/avatar_choice"
                     android:layout_width="match_parent"

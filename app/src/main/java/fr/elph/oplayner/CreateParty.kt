@@ -20,7 +20,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 */
 
 class CreateParty : AppCompatActivity(){
-
+    
     private lateinit var buttonCreate:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
