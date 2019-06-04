@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class oplaynerRepo {
     val api: oplaynerApi
     //val url= "http://app.elph.fr"
-    val url ="http://192.168.1.128:8888/oplayner_back/"
+    val url ="http://sandbox.francoisxaviermanceau.fr/oplayner/"
     init{
         val retrofit = Retrofit.Builder()
             .baseUrl(url)

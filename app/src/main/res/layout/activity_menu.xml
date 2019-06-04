@@ -26,7 +26,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline" android:layout_marginEnd="8dp"
-            android:layout_marginBottom="32dp" app:layout_constraintBottom_toTopOf="@+id/button2"/>
+            android:layout_marginBottom="32dp" app:layout_constraintBottom_toTopOf="@+id/music_button"/>
     <ImageView
             android:layout_width="24dp"
             android:layout_height="20dp" app:srcCompat="@drawable/ic_exit"
@@ -37,25 +37,26 @@
                                                 android:id="@+id/guideline" app:layout_constraintGuide_begin="417dp"
                                                 android:orientation="vertical"/>
     <Button
-            android:text="Button"
+            android:text="Nouriture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:id="@+id/nouriture_button" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/imageView6"
-            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/button2"/>
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/music_button"/>
     <Button
-            android:text="Button"
+            android:text="music"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button2" app:layout_constraintStart_toEndOf="@+id/button"
+            android:id="@+id/music_button" app:layout_constraintStart_toEndOf="@+id/nouriture_button"
             android:layout_marginStart="8dp" android:layout_marginTop="24dp"
             app:layout_constraintTop_toBottomOf="@+id/imageView6" app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintEnd_toStartOf="@+id/button3"/>
+            app:layout_constraintEnd_toStartOf="@+id/depense_button"/>
     <Button
-            android:text="Button"
+            android:text="depense"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button3" app:layout_constraintStart_toEndOf="@+id/button2"
+            android:id="@+id/depense_button" app:layout_constraintStart_toEndOf="@+id/music_button"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/imageView6"
             app:layout_constraintHorizontal_bias="0.5"/>

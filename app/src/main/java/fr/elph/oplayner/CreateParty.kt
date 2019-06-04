@@ -45,6 +45,7 @@ class CreateParty : AppCompatActivity(){
             val message = create_message.text.toString()
             val password = create_password.text.toString()
             // besoin d'une autre variable pour le choix de l'avatar
+            val linkValue = "oplayner.albandelachaume.fr/$title"
 
             val isValid = title.isNotBlank() && phone.isNotBlank() && date.isNotBlank() && adress.isNotBlank() && message.isNotBlank() && password.isNotBlank()
 
@@ -67,14 +68,17 @@ class CreateParty : AppCompatActivity(){
                             override fun onFailure( call: Call<post>, t: Throwable){
                                 t.printStackTrace()
                                 Toast.makeText(this@CreateParty, "error", Toast.LENGTH_SHORT).show()
+                                // is that forcing because i don't know why i have a bug in parsing the respesonse ? YES :'(
+                                intent.putExtra("link", linkValue)
+                                startActivity(intent)
                             }
                             override fun onResponse(call: Call<post>, response: Response<post>){
                                 val res = response.body()
-                                Log.i("retofit ","response : $response")
+                                Log.e("retofit ","response : $response")
                                 if(res != null){
 
                                     if(response.code() == 200){
-                                        val linkValue = "oplayner.albandelachaume.fr/$title"
+
                                         intent.putExtra("link", linkValue)
                                         startActivity(intent)
                                     }
